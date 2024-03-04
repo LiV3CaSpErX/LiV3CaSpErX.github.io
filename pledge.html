@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Author: Kaung Min Khant
+    File type: html file
+    FIle path: /html/pledge.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Earth</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- animate core CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body onload="getTheme()"> 
+<!-- start of navbar section -->
+<nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary ps-1 ps-sm-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#top"><i class="bi bi-tree-fill"></i> Save The Earth</a>
+    <div class="d-inline-flex ms-auto justify-content-end">
+      <button class="btn" onclick="themeSwitch()"><i id="theme-icon" class="bi"></i></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav nav-underline flex-grow-1 justify-content-end pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ourmisson.html">Our Mission</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"  href="reason.html">Reason</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="pledge.html">Pledge For Go Green</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</nav>
+<!-- end of navbar section -->
+<!-- start of hero section -->
+<div class="vh-100 container-fluid position-relative text-center mt-5 mb-2" >
+      <div class="row d-flex h-100 justify-content-evenly align-items-center">
+        <div class="col-12 col-sm-6">
+            <h1 class="display-1 animate__animated animate__flip">Go Green, Your Way</h1>
+        </div>
+        <div class="col-12 col-sm-6">
+          <!-- image from https://www.freepik.com/free-vector/active-people-bikes-windmills-house-with-solar-panel-rooftop-flat-illustration_11235236.htm -->
+            <img src="assets/PledgePageAssets/active-people-bikes-windmills-house-with-solar-panel-rooftop-flat-illustration.svg" class="img-fluid" alt="active-people-bikes-windmills-house-with-solar-panel-rooftop-flat-illustration">
+            <p class="text-end">
+              <small>
+                <a href="https://www.freepik.com/free-vector/active-people-bikes-windmills-house-with-solar-panel-rooftop-flat-illustration_11235236.htm" class="text-decoration-none" target="_blank">Image by pch.vector</a></small>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- end of hero section-->
+<!-- start of TImer Section-->
+<div class="container-fluid text-center mb-5">
+  <h2 class="display-4">Singapore Net Zero Future By</h2>
+  <p class="display-2 lead fw-bold">2050</p>
+  <h2 class="display-4">Time Remaining:</h2>
+  <p class="display-2 lead fw-bold" id="timer"></p>
+  <h2 class="display-4">Pledge Now for Net Zero</h2>
+</div>
+<!-- end of Timer Section-->
+<!-- start of form section-->
+<div class="container bg-body-secondary">
+  <form class="row g-3 needs-validation" novalidate>
+    <!-- start of name input section-->
+    <div class="col-12">
+      <label for="inputName" class="form-label">Name</label>
+      <input type="text" class="form-control" id="inputName" placeholder="Fritz" required>
+      <div class="invalid-feedback">
+        Please enter a name.
+      </div>
+    </div>
+    <!-- end of name input section-->
+    <!-- start of email input section-->
+    <div class="col-md-6">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="Fritz@gmail.com" required>
+      <div class="invalid-feedback">
+        Please enter an valid email.
+      </div>
+    </div>
+    <!-- end of email input section-->
+    <!-- start of phone number input section-->
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{8}" size="8" placeholder="98765432" required>
+      <div class="invalid-feedback">
+        Please enter a valid phone number.
+      </div>
+    </div>
+    <!-- end of phone number input section-->
+    <!-- start of status select section-->
+    <div class="col-md-6">
+      <label for="statusSelect" class="form-label">Status</label>
+      <select class="form-select" aria-label="Status of User" id="statusSelect">
+        <option value="Secondary Student">Secondary Student</option>
+        <option value="JC Student">JC Student</option>
+        <option value="Poly Student" selected>Poly Student</option>
+        <option value="University Student">University Student</option>
+        <option value="Working Adult">Working Adult</option>
+      </select>
+    </div>
+    <!-- end of status select section-->
+    <!-- start of date of birth date section-->
+    <div class="col-md-6">
+      <label class="form-label" for="dateOfBirth">Date of Birth</label>
+      <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" value="2006-07-22" min="1980-01-01" max="2023-06-01">
+    </div>
+    <!-- end of date of birth date section-->
+    <!-- start of gender radio section-->
+    <fieldset class="col-md-6">
+      <legend class="col-form-label pt-0">Gender</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="genderRadios1" value="male" checked>
+        <label class="form-check-label" for="genderRadios1">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="genderRadios2" value="female">
+        <label class="form-check-label" for="genderRadios2">
+          Female
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="genderRadios3" value="other">
+        <label class="form-check-label" for="genderRadios3">
+          Other
+        </label>
+      </div>
+    </fieldset>
+    <!-- end of gender radio section-->
+    <!-- start of contact checkbox section-->
+    <fieldset class="col-md-6">
+      <legend class="col-form-label pt-0">Contact By</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="phoneCheck" name="contact" value= "Phone">
+        <label class="form-check-label" for="phoneCheck">
+          Phone
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="smsCheck" name="contact" value= "SMS">
+        <label class="form-check-label" for="smsCheck">
+          SMS
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="emailCheck" name="contact" value= "Email">
+        <label class="form-check-label" for="emailCheck">
+          Email
+        </label>
+      </div>
+    </fieldset>
+    <!-- end of contact checkbox section-->
+    <!-- start of address input section-->
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="Jurong West Central 2" required>
+      <div class="invalid-feedback">
+        Please enter an address.
+      </div>
+    </div>
+    <!-- end of address input section-->
+    <!-- start of devotion range section-->
+    <div class="col-12">
+      <label for="PledgeRange" class="form-label">How committed are u for go green? (Range from 1 to 6)</label>
+      <input type="range" class="form-range" min="0" max="6" value="3" id="PledgeRange">
+    </div>
+    <!-- end of devotion range section-->
+    <!-- start of share your reason textarea section-->
+    <div class="col-12">
+      <label for="reasonTextarea" class="form-label">Share Your Reason</label>
+      <textarea class="form-control" id="reasonTextarea" rows="3" required></textarea>
+      <div class="invalid-feedback">
+        Please Share your reason.
+      </div>
+    </div>
+    <!-- end of share your reason textarea section-->
+    <!-- start of user agreement checkbox section-->
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="pledgeCheck" required>
+        <label class="form-check-label" for="pledgeCheck">
+          I will Pledge For Go Green and agree User's Term & condition.
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <!-- end of user agreement checkbox section-->
+    <div class="col-12 pb-3">
+      <button type="submit" class="btn btn-primary">Submit Form</button>
+    </div>
+  </form>
+</div>
+<!-- end of form section-->
+<!-- start of Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ModalLabel">Pledge Form</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center lead">
+        <h2 class="fw-bold">Data is submitted.</h2>
+        <p id="showName"></p>
+        <p id="showEmail"></p>
+        <p id="showPhoneNumber"></p>
+        <p id="showStatus"></p>
+        <p id="showDOB"></p>
+        <p id="showGender"></p>
+        <p id="showContactBy"></p>
+        <p id="showAddr"></p>
+        <p id="showCommitted"></p>
+        <p id="showReason"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Modal-->
+
+<!-- start of footer section-->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top px-5">
+  <div class="col-md-4 d-flex align-items-center">
+    <span class="mb-3 mb-md-0">&copy; 2023 Singapore Polytechnic</span>
+  </div>
+
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a href="https://twitter.com/SingaporePoly" target="_blank"><i class="bi bi-twitter"></i></a></li>
+    <li class="ms-3"><a href="https://www.instagram.com/singaporepoly/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a></li>
+    <li class="ms-3"><a href="https://www.facebook.com/singaporepolytechnic/" target="_blank" ><i class="bi bi-facebook"></i></a></li>
+  </ul>
+</footer>
+<!-- end of footer section-->
+<!-- Bootstrap core JScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<!-- Custom JScript-->
+<script defer src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Author: Kaung Min Khant
+    File type: html file
+    FIle path: /html/reason.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Earth</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- animate core CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body onload="getTheme()">
+<!-- start of navbar section -->
+<nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary ps-1 ps-sm-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#top"><i class="bi bi-tree-fill"></i> Save The Earth</a>
+    <div class="d-inline-flex ms-auto justify-content-end">
+      <button class="btn" onclick="themeSwitch()"><i id="theme-icon" class="bi"></i></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav nav-underline flex-grow-1 justify-content-end pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ourmisson.html">Our Mission</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="reason.html">Reason</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="pledge.html">Pledge For Go Green</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</nav>
+<!-- end of navbar section -->
+<!-- start of hero section -->
+<div class="vh-100 container-fluid position-relative text-center mt-5 mb-2" >
+    <div class="row d-flex h-100 justify-content-evenly align-items-center">
+      <div class="col-12 col-sm-6">
+          <h1 class="display-2 animate__animated animate__tada">Our planet is at breaking point</h1>
+      </div>
+      <div class="col-12 col-sm-6">
+        <!-- image from https://www.freepik.com/free-vector/tiny-people-with-melting-planet_16334900.htm#query=global%20warming&position=35&from_view=search&track=ais%22%3EImage -->
+          <img src="assets/ReasonPageAssets/Tiny-people-with-melting-planet-in-background.svg" class="img-fluid" alt="Tiny-people-with-melting-planet-in-background">
+          <p class="text-end">
+            <small>
+              <a href="https://www.freepik.com/free-vector/tiny-people-with-melting-planet_16334900.htm#query=global%20warming&position=35&from_view=search&track=ais%22%3EImage" class="text-decoration-none" target="_blank">Image by pch.vector</a>
+            </small>
+          </p>
+      </div>
+  </div>
+</div>
+<!-- end of hero section-->
+<!-- start of reason Section-->
+<div class="container-fluid text-center mb-5">
+    <p class="lead mb-5 bg-body-secondary py-5">Two thirds of our earth’s oceans and three quarters of its land have been damaged by humans. One million species could vanish by 2050 – accelerating the global extinction rate potentially hundreds of times faster than over the last 10 million years. One fifth of all nations could see their ecosystems collapse completely</p>
+    <h2 class="display-4 text-center mb-5">Ten Warmest Years (1880–2022)</h2>
+    <p class="lead text-center">The following table lists the global combined land and ocean annually averaged temperature rank and anomaly for each of the 10 warmest years on record.</p>
+</div>
+<!-- end of reason Section-->
+<!-- start of table section-->
+  <div class="container text-center">
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <!-- Data from https://www.ncei.noaa.gov/access/monitoring/monthly-report/global/202213 -->
+        <caption class="text-end">Data From <small><a href="https://www.ncei.noaa.gov/access/monitoring/monthly-report/global/202213" target=”_blank”>NOAA</a></small></caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Year</th>
+            <th scope="col">Anomaly °C</th>
+            <th scope="col">Anomaly °F</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" id="tableBody">
+        </tbody>
+      </table>  
+    </div>
+  </div>
+<!-- end of table section-->  
+<!-- start of footer section-->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top px-5">
+  <div class="col-md-4 d-flex align-items-center">
+    <span class="mb-3 mb-md-0">&copy; 2023 Singapore Polytechnic</span>
+  </div>
+
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a href="https://twitter.com/SingaporePoly" target="_blank"><i class="bi bi-twitter"></i></a></li>
+    <li class="ms-3"><a href="https://www.instagram.com/singaporepoly/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a></li>
+    <li class="ms-3"><a href="https://www.facebook.com/singaporepolytechnic/" target="_blank" ><i class="bi bi-facebook"></i></a></li>
+  </ul>
+</footer>
+<!-- end of footer section-->
+<!-- Bootstrap core JScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<!-- Custom JScript-->
+<script src="script/script.js"></script>
+</body>
+</html>

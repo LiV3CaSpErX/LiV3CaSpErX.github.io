@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Author: Kaung Min Khant
+    File type: html file
+    FIle path: /html/index.html -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save The Earth</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- animate core CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- custom css-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="getTheme()">
+  <!-- start of navbar section -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary ps-1 ps-sm-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#top"><i class="bi bi-tree-fill"></i> Save The Earth</a>
+      <div class="d-inline-flex ms-auto justify-content-end">
+        <button class="btn" onclick="themeSwitch()">
+          <i id="theme-icon" class="bi"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav nav-underline flex-grow-1 justify-content-end pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ourmisson.html">Our Mission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reason.html">Reason</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pledge.html">Pledge For Go Green</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- end of navbar section -->
+  <!-- start of hero section -->
+  <div class="vh-100 container position-relative mb-4">
+    <div class="d-flex h-100 align-items-center">
+      <div class="ps-4">
+        <h1 class="display-1 mb-4 animate__animated animate__swing">
+          My name is <em class="fw-bold">Min Khant.</em>
+        </h1>
+        <p class="lead animate__animated animate__flash">
+          I am a student from <em class="fw-bold">Singapore Polytechnic</em>.
+          Right now i am attending <em class="fw-bold">DISM</em> course.
+        </p>
+        <a class="btn btn-secondary btn-lg" href="#intro" role="button">Learn more</a>
+      </div>
+    </div>
+  </div>
+  <!-- end of hero section-->
+  <!-- start of card-->
+  <div class="container" id="intro">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <!-- start of card 1 section-->
+      <div class="col">
+        <div class="card text-center h-100">
+          <!--image from https://www.freepik.com/free-vector/people-connecting-jigsaw-pieces-head-together_3584908.htm#&position=0&from_view=search&track=ais-->
+          <img src="assets/IndexPageAssets/people-connecting-jigsaw-pieces-head-together.svg" class="card-img-top img-fluid h-100" alt="people-connecting-jigsaw-pieces-head-together">
+          <div class="card-body">
+            <h5 class="card-title">My Values</h5>
+            <p class="card-text">
+              The things that I believe are important in the way I live.
+            </p>
+            <!--start of Accordion-->
+            <div class="container-fluid">
+              <div class="accordion accordion-flush" id="accordion1">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Curious
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                    <div class="accordion-body">
+                      <p class="lead">
+                        I wanna know more about a lot of things.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Creativity
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                    <div class="accordion-body">
+                      <p class="lead">I always try to find new solutions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Simplicity
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                    <div class="accordion-body">
+                      <p class="lead">
+                        I don't want things to be overly complicated.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of  Accordion-->
+          </div>
+          <div class="card-footer text-end">
+            <p>
+              <small>
+                <a href="https://www.freepik.com/free-vector/people-connecting-jigsaw-pieces-head-together_3584908.htm#&position=0&from_view=search&track=ais" class="text-decoration-none" target="”_blank”">
+                  Image by rawpixel.com
+                </a>
+                on Freepik
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end of card 1 section-->
+      <!-- start of card 2 section-->
+      <div class="col">
+        <div class="card text-center h-100">
+          <!-- image from https://www.freepik.com/free-vector/business-team-putting-together-jigsaw-puzzle-isolated-flat-vector-illustration-cartoon-partners-working-connection-teamwork-partnership-cooperation-concept_10606197.htm#&position=0&from_view=search&track=ais -->
+          <img src="assets/IndexPageAssets/Business-team-putting-together-jigsaw-puzzle.svg" class="card-img-top img-fluid h-100" alt="Business-team-putting-together-jigsaw-puzzle">
+          <div class="card-body">
+            <h5 class="card-title">My Personality</h5>
+            <p class="card-text">
+              My unique patterns of thoughts, feelings, and behaviors.
+            </p>
+            <!--start of Accordion-->
+            <div class="container-fluid">
+              <div class="accordion accordion-flush" id="accordion2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                      Self-disciplined
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion2">
+                    <div class="accordion-body">
+                      <p class="lead">Sometimes I only focus on my goal.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      Adaptable
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordion2">
+                    <div class="accordion-body">
+                      <p class="lead">I can quickly adjust to the changes.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      Quick-learner
+                    </button>
+                  </h2>
+                  <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordion2">
+                    <div class="accordion-body">
+                      <p class="lead">I can quickly learn new things.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of  Accordion-->
+          </div>
+          <div class="card-footer text-end">
+            <p>
+              <small>
+                <a href="https://www.freepik.com/free-vector/business-team-putting-together-jigsaw-puzzle-isolated-flat-vector-illustration-cartoon-partners-working-connection-teamwork-partnership-cooperation-concept_10606197.htm#&position=0&from_view=search&track=ais" class="text-decoration-none" target="”_blank”">
+                  Image by pch.vector
+                </a>
+                on Freepik
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of card 2 section -->
+  </div>
+  <!-- end of card-->
+  <!-- start of footer section-->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top px-5">
+    <div class="col-md-4 d-flex align-items-center">
+      <span class="mb-3 mb-md-0">&copy; 2023 Singapore Polytechnic</span>
+    </div>
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3">
+        <a href="https://twitter.com/SingaporePoly" target="_blank"><i class="bi bi-twitter"></i></a>
+      </li>
+      <li class="ms-3">
+        <a href="https://www.instagram.com/singaporepoly/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a>
+      </li>
+      <li class="ms-3">
+        <a href="https://www.facebook.com/singaporepolytechnic/" target="_blank"><i class="bi bi-facebook"></i></a>
+      </li>
+    </ul>
+  </footer>
+  <!-- end of footer section-->
+  <!-- Bootstrap core JScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <!-- Custom JScript-->
+  <script defer src="script/script.js"></script>
+</body>
+</html>

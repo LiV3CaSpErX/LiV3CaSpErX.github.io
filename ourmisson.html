@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Author: Kaung Min Khant
+    File type: html file
+    FIle path: /html/ourmisson.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Earth</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- animate core CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body onload="getTheme()">
+<!-- start of navbar section -->
+<nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary ps-1 ps-sm-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#top"><i class="bi bi-tree-fill"></i> Save The Earth</a>
+    <div class="d-inline-flex ms-auto justify-content-end">
+      <button class="btn" onclick="themeSwitch()"><i id="theme-icon" class="bi"></i></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav nav-underline flex-grow-1 justify-content-end pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ourmisson.html">Our Mission</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="reason.html">Reason</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="pledge.html">Pledge For Go Green</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</nav>
+<!-- end of navbar section -->
+<!-- start of caroucel section-->
+<div id="carouselCaptions" class="carousel slide carousel-fade position-relative mt-5 mb-4">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!--image from disposable-environmentally-friendly-tableware-eco-friendly-disposable-tableware-concept-saving-planet-rejection-plastic -->
+      <img src="assets/OurMissionPageAssets/disposable-environmentally-friendly-tableware-eco-friendly-disposable-tableware-concept-saving-planet-rejection-plastic-1.jpg" class="d-block w-100" alt="image-background-with-eco-friendly-disposable-1">
+      <div class="carousel-caption d-block text-dark">
+        <h5 class="animate__animated animate__bounceInLeft">Believe</h5>
+        <p class="d-none d-md-block animate__animated animate__bounceInRight">We believe in creating 
+          <em>safe and green spaces</em>
+          for the well-being of our community</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--image from disposable-environmentally-friendly-tableware-eco-friendly-disposable-tableware-concept-saving-planet-rejection-plastic -->
+      <img src="assets/OurMissionPageAssets/disposable-environmentally-friendly-tableware-eco-friendly-disposable-tableware-concept-saving-planet-rejection-plastic-2.jpeg" class="d-block w-100" alt="image-background-with-eco-friendly-disposable-2">
+      <div class="carousel-caption d-block text-dark">
+        <h5 class="animate__animated animate__bounceInLeft">Pledge</h5>
+        <p class="d-none d-md-block animate__animated animate__bounceInRight">We pledge to reduce 
+          <em>our environmental
+          impact</em> and <em>nurture stewards
+          of sustainability</em></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--image from disposable-environmentally-friendly-tableware-eco-friendly-disposable-tableware-concept-saving-planet-rejection-plastic -->
+      <img src="assets/OurMissionPageAssets/eco-friendly-disposable-tableware-concept-saving-planet-rejection-plastic-3.jpeg" class="d-block w-100" alt="image-background-with-eco-friendly-disposable-3">
+      <div class="carousel-caption d-block text-dark">
+        <h5 class="animate__animated animate__bounceInLeft">Empower</h5>
+        <p class="d-none d-md-block animate__animated animate__bounceInRight">We 
+          <em>enable action</em> and
+          <em>empower people</em></p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- end of caroucel section-->
+<!-- Start of grid section with cards inside-->
+<div class="container text-center">
+  <h2 class="display-2 text-center mb-4 animate__animated animate__bounce">Our Effort at SP to Go Green</h2>
+  <div class="row row-cols-auto g-4">
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card h-100">
+          <!-- image from SP website https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters -->
+          <img src="assets/OurMissionPageAssets/green-mark-buildings.svg" class="img-fluid card-img-top w-50 mx-auto" alt="green-mark-buildings">
+        <div class="card-body text-center">
+          <h5 class="card-title display-4 text-primary">4</h5>
+          <h6 class="card-subtitle mb-2">Green Mark Platinum Buildings</h6>
+          <p class="card-text">T18A, T18B, T3B and the SP Sports Arena have been certified Green Mark Platinum with on-going efforts to certify all 22 buildings in SP by 2025.</p>
+        </div>
+        <div class="card-footer text-end">
+          <p><small><a href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters" class="text-decoration-none" target=”_blank”>Image from Sp</a></small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card h-100">
+        <!-- image from SP website https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters -->
+        <img src="assets/OurMissionPageAssets/flora.svg" class="img-fluid card-img-top w-50 mx-auto" alt="flora">
+        <div class="card-body">
+          <h5 class="card-title display-4 text-primary">230</h5>
+          <h6 class="card-subtitle mb-2">Species of Flora</h6>
+          <p class="card-text">SP's lush campus is home to an incredible biodiversity of plants including our majestic Brown Woolly Fig Heritage Trees found near Food Court 1.</p>
+        </div>
+        <div class="card-footer text-end">
+          <p><small><a href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters" class="text-decoration-none" target=”_blank”>Image from Sp</a></small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card h-100">
+        <!-- image from SP website https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters -->
+        <img src="assets/OurMissionPageAssets/water-dispensers.svg" class="img-fluid card-img-top w-50 mx-auto" alt="water-dispensers">
+        <div class="card-body">
+          <h5 class="card-title display-4 text-primary">110+</h5>
+          <h6 class="card-subtitle mb-2">Water Dispensers</h6>
+          <p class="card-text">We cultivate eco-conscious habits by encouraging students and staff to use water dispensers around campus and have ceased the use of plastic bottled water at our events.</p>
+        </div>
+        <div class="card-footer text-end">
+          <p><small><a href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters" class="text-decoration-none" target=”_blank”>Image from Sp</a></small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card h-100">
+        <!-- image from SP website https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters -->
+        <img src="assets/OurMissionPageAssets/sensors.svg" class="img-fluid card-img-top w-50 mx-auto" alt="sensors">
+        <div class="card-body">
+          <h5 class="card-title display-4 text-primary">500+</h5>
+          <h6 class="card-subtitle mb-2">Smart Sensors around the campus</h6>
+          <p class="card-text">Many facilities on campus are monitored with smart sensors to track human traffic and monitor air quality for the health and well-being of students and staff.</p>
+        </div>
+        <div class="card-footer text-end">
+          <p><small><a href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters" class="text-decoration-none" target=”_blank”>Image from Sp</a></small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card h-100">
+        <!-- image from SP website https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters -->
+        <img src="assets/OurMissionPageAssets/smart-offices-icons.svg" class="img-fluid card-img-top w-50 mx-auto" alt="smart-offices-icons">
+        <div class="card-body">
+          <h5 class="card-title display-4 text-primary">4</h5>
+          <h6 class="card-subtitle mb-2">Smart Offices</h6>
+          <p class="card-text">Enhancing the work environment for the health and well-being of our staff through air quality and temperature sensors in our offices.</p>
+        </div>
+        <div class="card-footer text-end">
+          <p><small><a href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters" class="text-decoration-none" target=”_blank”>Image from Sp</a></small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card h-100">
+        <!-- image from SP website https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters -->
+        <img src="assets/OurMissionPageAssets/curriculum.svg" class="img-fluid card-img-top w-50 mx-auto" alt="curriculum">
+        <div class="card-body">
+          <h5 class="card-title display-4 text-primary">13</h5>
+          <h6 class="card-subtitle mb-2">Diplomas featuring CCC</h6>
+          <p class="card-text">The CCC prepares our students for the green economy by exposing them to inter-disciplinary learning experiences and global issues, framed by the SG Green Plan</p>
+        </div>
+        <div class="card-footer text-end">
+          <p><small><a href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters" class="text-decoration-none" target=”_blank”>Image from Sp</a></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of grid section with cards inside-->
+<div class="container-fluid">
+  <p class="text-end">
+    <small>
+      <a href="https://www.freepik.com/free-photo/disposable-environmentally-friendly-tableware-eco-friendly-disposable-tableware-concept-saving-planet-rejection-plastic_13413416.htm#&position=0&from_view=search&track=ais" class="text-decoration-none" target="_blank">Carousel Image by pvproductions</a>
+    </small>
+  </p>
+</div>
+<!-- start of footer section-->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top px-5">
+  <div class="col-md-4 d-flex align-items-center">
+    <span class="mb-3 mb-md-0">&copy; 2023 Singapore Polytechnic</span>
+  </div>
+
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a href="https://twitter.com/SingaporePoly" target="_blank"><i class="bi bi-twitter"></i></a></li>
+    <li class="ms-3"><a href="https://www.instagram.com/singaporepoly/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a></li>
+    <li class="ms-3"><a href="https://www.facebook.com/singaporepolytechnic/" target="_blank" ><i class="bi bi-facebook"></i></a></li>
+  </ul>
+</footer>
+<!-- end of footer section-->
+<!-- Bootstrap core JScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<!-- Custom JScript-->
+<script defer src="script/script.js"></script>
+</body>
+</html>

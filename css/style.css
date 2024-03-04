@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* 
+Author: Kaung Min Khant
+File type: css file
+Style for: index.html
+File path: html/index.html
+*/
+
+.btn-secondary {
+    background-color: Indigo;
+    color: white;
+}
